@@ -249,11 +249,15 @@
         <label>Service *</label>
         <select name="service" [(ngModel)]="booking().service" required>
           <option value="">Select a service</option>
-          <option value="Basic Wash">Basic Wash - ₹19.99</option>
-          <option value="Premium Wash">Premium Wash - ₹34.99</option>
-          <option value="Deluxe Package">Deluxe Package - ₹54.99</option>
-          <option value="Interior Deep Clean">Interior Deep Clean - ₹44.99</option>
-          <option value="Ceramic Coating">Ceramic Coating - ₹89.99</option>
+          @for (category of services; track category.category) {
+            <optgroup [label]="category.category">
+              @for (service of category.items; track service.name) {
+                <option [value]="service.name" [disabled]="service.price === 0">
+                  {{ service.name }} - {{ service.price === 0 ? 'Custom' : '₹' + service.price }}
+                </option>
+              }
+            </optgroup>
+          }
         </select>
       </div>
 
