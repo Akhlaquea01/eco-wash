@@ -105,7 +105,7 @@ body {
 /* <CHANGE> Modern hero section with minimal design */
 .hero-section {
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%),
-        url('../assets/images/hero-section.png') no-repeat center center / cover;
+        url('/assets/images/hero-section.png') no-repeat center center / cover;
     padding: 120px 20px; /* This padding adds height to the section */
     text-align: center;
     height: 500px; /* Or a specific height that works for your layout */
