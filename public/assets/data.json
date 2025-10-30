@@ -1,106 +1,395 @@
 {
   "services": [
     {
-      "icon": "💧",
-      "name": "Basic Wash",
-      "description": "Exterior wash with foam and rinse",
-      "price": 19.99
+      "category": "5 Seater Vehicle",
+      "items": [
+        {
+          "icon": "💧",
+          "name": "Basic Wash",
+          "description": "Exterior wash only (interior not included)",
+          "price": 200
+        },
+        {
+          "icon": "✨",
+          "name": "Premium Wash",
+          "description": "Exterior + interior cleaning and vacuum service",
+          "price": 350
+        },
+        {
+          "icon": "👑",
+          "name": "Deluxe Package",
+          "description": "4 washes in a month with interior & exterior detailing",
+          "price": 999
+        },
+        {
+          "icon": "🧽",
+          "name": "Detailing Service",
+          "description": "Full interior and exterior deep cleaning",
+          "price": 2500
+        },
+        {
+          "icon": "🛡️",
+          "name": "Body Rubbing & Polishing",
+          "description": "Removes dullness and restores car shine",
+          "price": 1200
+        },
+        {
+          "icon": "🚫",
+          "name": "Ceramic Coating",
+          "description": "Currently unavailable — coming soon!",
+          "price": 0
+        }
+      ]
     },
     {
-      "icon": "✨",
-      "name": "Premium Wash",
-      "description": "Exterior + interior vacuum & wipe",
-      "price": 34.99
+      "category": "7 Seater Vehicle",
+      "items": [
+        {
+          "icon": "💧",
+          "name": "Basic Wash",
+          "description": "Exterior wash only (interior not included)",
+          "price": 200
+        },
+        {
+          "icon": "✨",
+          "name": "Premium Wash",
+          "description": "Exterior + interior cleaning and vacuum service",
+          "price": 400
+        },
+        {
+          "icon": "👑",
+          "name": "Deluxe Package",
+          "description": "3 washes in a month with interior & exterior detailing",
+          "price": 999
+        },
+        {
+          "icon": "🧽",
+          "name": "Detailing Service",
+          "description": "Full detailing for large vehicles — inside and out",
+          "price": 3000
+        },
+        {
+          "icon": "🛡️",
+          "name": "Body Rubbing & Polishing",
+          "description": "Removes scratches and enhances gloss finish",
+          "price": 1500
+        },
+        {
+          "icon": "🚫",
+          "name": "Ceramic Coating",
+          "description": "Currently unavailable — coming soon!",
+          "price": 0
+        }
+      ]
     },
     {
-      "icon": "👑",
-      "name": "Deluxe Package",
-      "description": "Full detail with wax & tire shine",
-      "price": 54.99
-    },
-    {
-      "icon": "🧼",
-      "name": "Interior Deep Clean",
-      "description": "Seats, carpets, and dashboard detail",
-      "price": 44.99
-    },
-    {
-      "icon": "🛡️",
-      "name": "Ceramic Coating",
-      "description": "Long-lasting protection & shine",
-      "price": 89.99
-    },
-    {
-      "icon": "🚙",
-      "name": "Fleet Wash",
-      "description": "Bulk pricing for multiple vehicles",
-      "price": 0
+      "category": "2 Wheelers",
+      "items": [
+        {
+          "icon": "🛵",
+          "name": "Standard Wash",
+          "description": "Complete foam wash and rinse",
+          "price": 60
+        },
+        {
+          "icon": "✨",
+          "name": "Wash & Polish",
+          "description": "Wash with polish for extra shine and protection",
+          "price": 150
+        },
+        {
+          "icon": "⛓️",
+          "name": "Chain Spray",
+          "description": "Lubrication and protection for motorcycle chain",
+          "price": 20
+        }
+      ]
     }
   ],
   "offers": [
     {
-      "badge": "SAVE 25%",
-      "title": "Summer Special",
-      "description": "Get Premium Wash at just",
-      "price": 26.24,
-      "note": "Valid until end of month",
+      "badge": "SAVE ₹50",
+      "title": "Premium Wash Discount",
+      "description": "₹50 off on Premium Wash for all cars",
+      "price": 300,
+      "note": "Valid till this weekend",
       "buttonText": "Claim Offer",
       "buttonStyle": "btn-secondary",
-      "serviceName": "Premium Wash - Summer Special"
+      "serviceName": "Premium Wash Offer"
     },
     {
-      "badge": "BUY 3 GET 1 FREE",
-      "title": "Loyalty Bundle",
-      "description": "Book 3 washes, get 1 free",
-      "price": 59.97,
+      "badge": "LOYALTY REWARD",
+      "title": "Deluxe Package Advantage",
+      "description": "Book Deluxe Package & enjoy up to 4 washes monthly",
+      "price": 999,
       "note": "Perfect for regular customers",
-      "buttonText": "Get Bundle",
+      "buttonText": "Subscribe Now",
       "buttonStyle": "btn-secondary",
-      "serviceName": "Loyalty Bundle"
+      "serviceName": "Deluxe Package"
     },
     {
-      "badge": "REFERRAL BONUS",
-      "title": "Refer & Earn",
-      "description": "Earn credit for each friend",
-      "price": 10,
-      "note": "Unlimited referrals",
-      "buttonText": "Learn More",
+      "badge": "COMING SOON",
+      "title": "Ceramic Coating Service",
+      "description": "High gloss protection — launching soon!",
+      "price": 0,
+      "note": "Stay tuned for updates",
+      "buttonText": "Notify Me",
       "buttonStyle": "btn-secondary",
-      "serviceName": ""
-    },
-    {
-      "badge": "MONTHLY PASS",
-      "title": "Unlimited Wash Pass",
-      "description": "Unlimited washes per month",
-      "price": 79,
-      "note": "Cancel anytime",
-      "buttonText": "Subscribe",
-      "buttonStyle": "btn-secondary",
-      "serviceName": "Unlimited Monthly Pass"
+      "serviceName": "Ceramic Coating"
     }
   ],
   "testimonials": [
     {
+      "name": "Akhlaque Ahmad",
+      "role": "Local Guide · 62 reviews · 30 photos",
       "stars": 5,
-      "message": "Amazing service! My car looks brand new. The team was professional and efficient. Highly recommended!",
-      "name": "Sarah Johnson",
-      "role": "Verified Customer"
+      "message": "Awesome service ❤️",
+      "ownerReply": "thank u so much dear bro ❤️",
+      "timeAgo": "11 months ago"
     },
     {
+      "name": "Firoz Khan",
+      "role": "7 reviews",
       "stars": 5,
-      "message": "Best car wash in town! Quick, affordable, and they really care about the details. Will definitely come back.",
-      "name": "Michael Chen",
-      "role": "Verified Customer"
+      "message": "I recently visited ECO WASH 'N' SERVICES, and I must say I’m highly impressed with their service. From start to finish, the experience was seamless and professional.",
+      "ownerReply": "Thankyou so much Sir 🫰🏼",
+      "timeAgo": "11 months ago"
     },
     {
+      "name": "Ahsan Faiyaz Haidry",
+      "role": "7 reviews",
       "stars": 5,
-      "message": "The ceramic coating is incredible! My car stays clean longer and has an amazing shine. Worth every penny!",
-      "name": "Emily Rodriguez",
-      "role": "Verified Customer"
+      "message": "I had an amazing experience with ECO WASH 'N' SERVICES. Their attention to detail, eco-friendly cleaning methods, and top-notch customer service truly set them apart.",
+      "ownerReply": "",
+      "timeAgo": "8 months ago"
+    },
+    {
+      "name": "Aryan Shaikh",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Car wash in your mind? This is the place to be! Staff is friendly and knows their job well. I'm satisfied by their work.",
+      "ownerReply": "Thank you so much dear bro 💞🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Shiza Marufa",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Yeha ki service bahut acchi hai, mujhe bahut accha laga. Budget friendly and great experience! 🫶 😻",
+      "ownerReply": "Thank you so much mam 🫰🏼",
+      "timeAgo": "10 months ago"
+    },
+    {
+      "name": "Ambreen Hassan",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Very well service. Owner and workers both are very nice. Super fast and super clean service — must visit! 👍",
+      "ownerReply": "thank you so much mam 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Nasir Ahmad",
+      "role": "4 reviews",
+      "stars": 5,
+      "message": "Ek baar yha washing karwa k dekho — kahi aur jane ki zarurat nahi padegi!",
+      "ownerReply": "thank you sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "TRL YouTuber",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "A very good car wash. We all have done it multiple times. Washing👌👌👌",
+      "ownerReply": "Thankyou so much Sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Md Shadab",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Such a service has been opened for the first time in Muzaffarpur — well done!",
+      "ownerReply": "thank you sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Md Irshad Alam",
+      "role": "6 reviews · 4 photos",
+      "stars": 5,
+      "message": "Very good service providers. Staff behavior is good.",
+      "ownerReply": "thankyou so much dear bro 💞🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Roshni Aziz",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "The only place to get the best car cleaning. Excellent service quality!",
+      "ownerReply": "Thank u mam 🫰🏼☺️",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Shivam Jaiswal21",
+      "role": "3 reviews · 3 photos",
+      "stars": 5,
+      "message": "Very good service at valuable price.",
+      "ownerReply": "thankyou so much dear bro 💞🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Nehal Arshad",
+      "role": "5 reviews",
+      "stars": 5,
+      "message": "Osam service, nice behaviour ❤️",
+      "ownerReply": "Thankyou so much Sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Sameer Husain",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Mast service milti hai yahan 👍🏻😎",
+      "ownerReply": "Thank u so much sir 🫰🏼",
+      "timeAgo": "10 months ago"
+    },
+    {
+      "name": "MANISH FITCAMP GYM",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Best service — must visit once 👍",
+      "ownerReply": "thankyou so much dear bro 💞🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Shahreyar Khan",
+      "role": "1 review",
+      "stars": 5,
+      "message": "Really good experience. Thank you ECO WASH!",
+      "ownerReply": "Thank You So Much Sir 🫰🏼",
+      "timeAgo": "10 months ago"
+    },
+    {
+      "name": "Navneet Sharan",
+      "role": "4 reviews",
+      "stars": 5,
+      "message": "Awesome cleaning with super service support!",
+      "ownerReply": "thankyou so much dear bro 💞🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Anwar Hussain",
+      "role": "1 review",
+      "stars": 5,
+      "message": "One of the best service centres in Muzaffarpur.",
+      "ownerReply": "Thankyou so much dear bro 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "ARSHADUL ARFIN",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Brilliant Service.",
+      "ownerReply": "",
+      "timeAgo": "4 months ago"
+    },
+    {
+      "name": "Dilkashan Farrukh",
+      "role": "6 reviews",
+      "stars": 5,
+      "message": "Excellent service! Masha Allah, good work 👌👏🥰",
+      "ownerReply": "thankyou so much mam 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Shoyab Khan",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "One of the Best Washing Centers 😇",
+      "ownerReply": "Thankyou so much Sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "MD SARFRAJ",
+      "role": "6 reviews",
+      "stars": 5,
+      "message": "Best washing and best service 👍✅",
+      "ownerReply": "Thank u so much Sir 🫰🏼🫰🏼",
+      "timeAgo": "10 months ago"
+    },
+    {
+      "name": "Vandana Kumari",
+      "role": "3 reviews",
+      "stars": 5,
+      "message": "Good service provided.",
+      "ownerReply": "thankyou so much mam 💞🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Md Anwer",
+      "role": "3 reviews",
+      "stars": 5,
+      "message": "Very good service.",
+      "ownerReply": "Thankyou so much Sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Eqbal Modassir",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "One of the best washing centers.",
+      "ownerReply": "Thankyou so much dear bro 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Tabish Raza",
+      "role": "6 reviews",
+      "stars": 5,
+      "message": "Awesome washing service.",
+      "ownerReply": "Thankyou so much Sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Asgar Shekh",
+      "role": "4 reviews · 1 photo",
+      "stars": 5,
+      "message": "Best Service 😘🙏",
+      "ownerReply": "thank you sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Sudip Debnath",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "One of the best in town 👌",
+      "ownerReply": "Thank you so much sir 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Geeta Tanti",
+      "role": "1 review",
+      "stars": 5,
+      "message": "Good 👍💯",
+      "ownerReply": "Thank u so much mam 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Nemat Hussain",
+      "role": "3 reviews",
+      "stars": 5,
+      "message": "Great service 👍",
+      "ownerReply": "Thankyou so much mam 🫰🏼",
+      "timeAgo": "11 months ago"
+    },
+    {
+      "name": "Snehal Shrivastava",
+      "role": "2 reviews",
+      "stars": 5,
+      "message": "Service is too good!",
+      "ownerReply": "",
+      "timeAgo": "11 months ago"
     }
   ],
   "contactInfo": {
-    "location": "ECO WASH 'N' SERVICES,Nawab Road, Near Marwari High School, Chandwara, Muzaffarpur, Bihar (842001)",
+    "location": "ECO WASH 'N' SERVICES, Nawab Road, Near Marwari High School, Chandwara, Muzaffarpur, Bihar (842001)",
     "directionLink": "https://share.google/a2s7TbolXIVqdoRJT",
     "phone": "+919504707510",
     "displayPhone": "9504707510",

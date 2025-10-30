@@ -33,29 +33,38 @@
     <h2 class="section-title">Our Services</h2>
     <p class="section-subtitle">Choose the perfect wash package for your vehicle</p>
 
-    <div class="grid-3">
-      @for (service of services; track service.name) {
-      <div class="neo-card">
-        <div class="icon">{{ service.icon }}</div>
-
-        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">
-          {{ service.name }}
-        </h3>
-
-        <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">
-          {{ service.description }}
-        </p>
-
-        <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">
-          {{ service.price === 0 ? 'Custom' : '₹' + service.price }}
-        </p>
-
-        <button class="btn-primary" style="width: 100%;" (click)="selectService(service.name, service.price)">
-          {{ service.price === 0 ? 'Inquire' : 'Select' }}
-        </button>
-      </div>
+    <div class="services-section">
+      @for (category of services; track category.category) {
+        <h2 style="font-size: 22px; font-weight: 700; margin: 32px 0 16px; color: var(--text-primary); text-align: center;">
+          {{ category.category }}
+        </h2>
+    
+        <div class="grid-3">
+          @for (service of category.items; track service.name) {
+            <div class="neo-card">
+              <div class="icon" style="font-size: 32px; margin-bottom: 8px;">{{ service.icon }}</div>
+    
+              <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">
+                {{ service.name }}
+              </h3>
+    
+              <p style="color: var(--text-secondary); margin-bottom: 12px; font-size: 14px; line-height: 1.5;">
+                {{ service.description }}
+              </p>
+    
+              <p style="font-size: 22px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">
+                {{ service.price === 0 ? 'Custom' : '₹' + service.price }}
+              </p>
+    
+              <button class="btn-primary" style="width: 100%;" (click)="selectService(service.name, service.price)">
+                {{ service.price === 0 ? 'Inquire' : 'Select' }}
+              </button>
+            </div>
+          }
+        </div>
       }
     </div>
+    
   </div>
 </section>
 
