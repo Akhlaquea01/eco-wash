@@ -111,7 +111,15 @@ body {
     height: 500px; /* Or a specific height that works for your layout */
     min-height: 500px;
 }
-
+.logo-img {
+    object-fit: cover;
+    object-position: center;
+    height: 100px;
+    width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    clip-path: inset(0% 0% 0% 0%);
+  }
 .hero-content {
     max-width: 700px;
     margin: 0 auto;
