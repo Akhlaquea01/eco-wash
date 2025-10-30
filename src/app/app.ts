@@ -65,4 +65,9 @@ export class App {
       form.resetForm();
     }
   }
+  selectService(serviceName: string, price: number) {
+    this.selectedService.set(serviceName);
+    this.booking.update(form => ({ ...form, service: serviceName }));
+    this.openBookingModal(serviceName);
+  }
 }

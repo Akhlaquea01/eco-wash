@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+:root {
+    --bg-primary: #f5f7fa;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #eef2f5;
+    --text-primary: #2d3748;
+    --text-secondary: #718096;
+    --accent-primary: #4a90e2;
+    --accent-secondary: #50c878;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --shadow-inset: inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+}

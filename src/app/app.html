@@ -1,415 +1,415 @@
 <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-content">
-            <div class="logo">🚗 ecowashnservices</div>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#offers">Offers</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="btn-primary" onclick="openBookingModal()">Book Now</button>
-        </div>
-    </nav>
+<nav class="navbar">
+  <div class="navbar-content">
+      <div class="logo">🚗 ecowashnservices</div>
+      <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn-primary" (click)="openBookingModal()">Book Now</button>
+  </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-content">
-            <h1 style="font-size: 52px; margin-bottom: 16px; font-weight: 800; letter-spacing: -1px; color: var(--text-primary);">Premium Vehicle Wash Service</h1>
-            <p style="font-size: 18px; margin-bottom: 32px; color: var(--text-secondary); line-height: 1.6;">Professional cleaning for your car, inside and out. Fast, reliable, and affordable.</p>
-            <button class="btn-secondary" onclick="openBookingModal()" style="font-size: 16px; padding: 14px 32px;">Book Your Wash Today</button>
-        </div>
-    </section>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container hero-content">
+      <h1 style="font-size: 52px; margin-bottom: 16px; font-weight: 800; letter-spacing: -1px; color: var(--text-primary);">Premium Vehicle Wash Service</h1>
+      <p style="font-size: 18px; margin-bottom: 32px; color: var(--text-secondary); line-height: 1.6;">Professional cleaning for your car, inside and out. Fast, reliable, and affordable.</p>
+      <button class="btn-secondary" (click)="openBookingModal()" style="font-size: 16px; padding: 14px 32px;">Book Your Wash Today</button>
+  </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Choose the perfect wash package for your vehicle</p>
-            
-            <div class="grid-3">
-                <div class="neo-card">
-                    <div class="icon">💧</div>
-                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Basic Wash</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Exterior wash with foam and rinse</p>
-                    <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹19.99</p>
-                    <button class="btn-primary" onclick="selectService('Basic Wash', 19.99)" style="width: 100%;">Select</button>
-                </div>
+<!-- Services Section -->
+<section id="services" class="section">
+  <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Choose the perfect wash package for your vehicle</p>
+      
+      <div class="grid-3">
+          <div class="neo-card">
+              <div class="icon">💧</div>
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Basic Wash</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Exterior wash with foam and rinse</p>
+              <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹19.99</p>
+              <button class="btn-primary" (click)="selectService('Basic Wash', 19.99)" style="width: 100%;">Select</button>
+          </div>
 
-                <div class="neo-card">
-                    <div class="icon">✨</div>
-                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Premium Wash</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Exterior + interior vacuum & wipe</p>
-                    <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹34.99</p>
-                    <button class="btn-primary" onclick="selectService('Premium Wash', 34.99)" style="width: 100%;">Select</button>
-                </div>
+          <div class="neo-card">
+              <div class="icon">✨</div>
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Premium Wash</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Exterior + interior vacuum & wipe</p>
+              <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹34.99</p>
+              <button class="btn-primary" (click)="selectService('Premium Wash', 34.99)" style="width: 100%;">Select</button>
+          </div>
 
-                <div class="neo-card">
-                    <div class="icon">👑</div>
-                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Deluxe Package</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Full detail with wax & tire shine</p>
-                    <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹54.99</p>
-                    <button class="btn-primary" onclick="selectService('Deluxe Package', 54.99)" style="width: 100%;">Select</button>
-                </div>
+          <div class="neo-card">
+              <div class="icon">👑</div>
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Deluxe Package</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Full detail with wax & tire shine</p>
+              <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹54.99</p>
+              <button class="btn-primary" (click)="selectService('Deluxe Package', 54.99)" style="width: 100%;">Select</button>
+          </div>
 
-                <div class="neo-card">
-                    <div class="icon">🧼</div>
-                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Interior Deep Clean</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Seats, carpets, and dashboard detail</p>
-                    <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹44.99</p>
-                    <button class="btn-primary" onclick="selectService('Interior Deep Clean', 44.99)" style="width: 100%;">Select</button>
-                </div>
+          <div class="neo-card">
+              <div class="icon">🧼</div>
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Interior Deep Clean</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Seats, carpets, and dashboard detail</p>
+              <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹44.99</p>
+              <button class="btn-primary" (click)="selectService('Interior Deep Clean', 44.99)" style="width: 100%;">Select</button>
+          </div>
 
-                <div class="neo-card">
-                    <div class="icon">🛡️</div>
-                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Ceramic Coating</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Long-lasting protection & shine</p>
-                    <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹89.99</p>
-                    <button class="btn-primary" onclick="selectService('Ceramic Coating', 89.99)" style="width: 100%;">Select</button>
-                </div>
+          <div class="neo-card">
+              <div class="icon">🛡️</div>
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Ceramic Coating</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Long-lasting protection & shine</p>
+              <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">₹89.99</p>
+              <button class="btn-primary" (click)="selectService('Ceramic Coating', 89.99)" style="width: 100%;">Select</button>
+          </div>
 
-                <div class="neo-card">
-                    <div class="icon">🚙</div>
-                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Fleet Wash</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Bulk pricing for multiple vehicles</p>
-                    <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">Custom</p>
-                    <button class="btn-primary" onclick="selectService('Fleet Wash', 0)" style="width: 100%;">Inquire</button>
-                </div>
-            </div>
-        </div>
-    </section>
+          <div class="neo-card">
+              <div class="icon">🚙</div>
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Fleet Wash</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 14px;">Bulk pricing for multiple vehicles</p>
+              <p style="font-size: 28px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">Custom</p>
+              <button class="btn-primary" (click)="selectService('Fleet Wash', 0)" style="width: 100%;">Inquire</button>
+          </div>
+      </div>
+  </div>
+</section>
 
-    <!-- Offers Section -->
-    <section id="offers" class="section" style="background: var(--bg-tertiary);">
-        <div class="container">
-            <h2 class="section-title">Special Offers</h2>
-            <p class="section-subtitle">Limited time promotions to save you money</p>
-            
-            <div class="grid-2">
-                <!-- <CHANGE> Modern neomorphism offer cards with prominent pricing -->
-                <div class="offer-card">
-                    <div class="offer-badge">SAVE 25%</div>
-                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Summer Special</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Get Premium Wash at just</p>
-                    <div class="price-highlight">₹26.24</div>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Valid until end of month</p>
-                    <button class="btn-secondary" onclick="selectService('Premium Wash - Summer Special', 26.24)" style="width: 100%;">Claim Offer</button>
-                </div>
+<!-- Offers Section -->
+<section id="offers" class="section" style="background: var(--bg-tertiary);">
+  <div class="container">
+      <h2 class="section-title">Special Offers</h2>
+      <p class="section-subtitle">Limited time promotions to save you money</p>
+      
+      <div class="grid-2">
+          <!-- <CHANGE> Modern neomorphism offer cards with prominent pricing -->
+          <div class="offer-card">
+              <div class="offer-badge">SAVE 25%</div>
+              <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Summer Special</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Get Premium Wash at just</p>
+              <div class="price-highlight">₹26.24</div>
+              <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Valid until end of month</p>
+              <button class="btn-secondary" (click)="selectService('Premium Wash - Summer Special', 26.24)" style="width: 100%;">Claim Offer</button>
+          </div>
 
-                <div class="offer-card">
-                    <div class="offer-badge">BUY 3 GET 1 FREE</div>
-                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Loyalty Bundle</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Book 3 washes, get 1 free</p>
-                    <div class="price-highlight">₹59.97</div>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Perfect for regular customers</p>
-                    <button class="btn-secondary" onclick="selectService('Loyalty Bundle', 59.97)" style="width: 100%;">Get Bundle</button>
-                </div>
+          <div class="offer-card">
+              <div class="offer-badge">BUY 3 GET 1 FREE</div>
+              <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Loyalty Bundle</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Book 3 washes, get 1 free</p>
+              <div class="price-highlight">₹59.97</div>
+              <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Perfect for regular customers</p>
+              <button class="btn-secondary" (click)="selectService('Loyalty Bundle', 59.97)" style="width: 100%;">Get Bundle</button>
+          </div>
 
-                <div class="offer-card">
-                    <div class="offer-badge">REFERRAL BONUS</div>
-                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Refer & Earn</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Earn credit for each friend</p>
-                    <div class="price-highlight">₹10</div>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Unlimited referrals</p>
-                    <button class="btn-secondary" onclick="alert('Share your referral code with friends!')" style="width: 100%;">Learn More</button>
-                </div>
+          <div class="offer-card">
+              <div class="offer-badge">REFERRAL BONUS</div>
+              <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Refer & Earn</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Earn credit for each friend</p>
+              <div class="price-highlight">₹10</div>
+              <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Unlimited referrals</p>
+              <button class="btn-secondary" style="width: 100%;">Learn More</button>
+          </div>
 
-                <div class="offer-card">
-                    <div class="offer-badge">MONTHLY PASS</div>
-                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Unlimited Wash Pass</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Unlimited washes per month</p>
-                    <div class="price-highlight">₹79</div>
-                    <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Cancel anytime</p>
-                    <button class="btn-secondary" onclick="selectService('Unlimited Monthly Pass', 79)" style="width: 100%;">Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </section>
+          <div class="offer-card">
+              <div class="offer-badge">MONTHLY PASS</div>
+              <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">Unlimited Wash Pass</h3>
+              <p style="color: var(--text-secondary); margin-bottom: 8px; font-size: 14px;">Unlimited washes per month</p>
+              <div class="price-highlight">₹79</div>
+              <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Cancel anytime</p>
+              <button class="btn-secondary" (click)="selectService('Unlimited Monthly Pass', 79)" style="width: 100%;">Subscribe</button>
+          </div>
+      </div>
+  </div>
+</section>
 
-    <!-- Booking Section -->
-    <section id="booking" class="section">
-        <div class="container">
-            <h2 class="section-title">Quick Booking</h2>
-            <p class="section-subtitle">Reserve your spot in just a few clicks</p>
-            
-            <div style="max-width: 600px; margin: 0 auto;">
-                <div class="neo-card">
-                    <form id="bookingForm" onsubmit="handleBooking(event)">
-                        <div class="form-group">
-                            <label>Full Name *</label>
-                            <input type="text" required placeholder="John Doe">
-                        </div>
+<!-- Booking Section -->
+<section id="booking" class="section">
+  <div class="container">
+      <h2 class="section-title">Quick Booking</h2>
+      <p class="section-subtitle">Reserve your spot in just a few clicks</p>
+      
+      <div style="max-width: 600px; margin: 0 auto;">
+          <div class="neo-card">
+              <form #bookingForm="ngForm" (ngSubmit)="handleBooking(bookingForm)">
+                  <div class="form-group">
+                      <label>Full Name *</label>
+                      <input type="text" name="name" [(ngModel)]="booking().name" required placeholder="John Doe">
+                  </div>
 
-                        <div class="form-group">
-                            <label>Email Address *</label>
-                            <input type="email" required placeholder="john@example.com">
-                        </div>
+                  <div class="form-group">
+                      <label>Email Address *</label>
+                      <input type="email" name="email" [(ngModel)]="booking().email" required placeholder="john@example.com">
+                  </div>
 
-                        <div class="form-group">
-                            <label>Phone Number *</label>
-                            <input type="tel" required placeholder="(555) 123-4567">
-                        </div>
+                  <div class="form-group">
+                      <label>Phone Number *</label>
+                      <input type="tel" name="phone" [(ngModel)]="booking().phone" required placeholder="(555) 123-4567">
+                  </div>
 
-                        <div class="form-group">
-                            <label>Vehicle Type *</label>
-                            <select required>
-                                <option value="">Select vehicle type</option>
-                                <option value="sedan">Sedan</option>
-                                <option value="suv">SUV</option>
-                                <option value="truck">Truck</option>
-                                <option value="van">Van</option>
-                                <option value="sports">Sports Car</option>
-                            </select>
-                        </div>
+                  <div class="form-group">
+                      <label>Vehicle Type *</label>
+                      <select name="vehicleType" [(ngModel)]="booking().vehicleType" required>
+                          <option value="">Select vehicle type</option>
+                          <option value="sedan">Sedan</option>
+                          <option value="suv">SUV</option>
+                          <option value="truck">Truck</option>
+                          <option value="van">Van</option>
+                          <option value="sports">Sports Car</option>
+                      </select>
+                  </div>
 
-                        <div class="form-group">
-                            <label>Service *</label>
-                            <select id="serviceSelect" required>
-                                <option value="">Select a service</option>
-                                <option value="Basic Wash">Basic Wash - ₹19.99</option>
-                                <option value="Premium Wash">Premium Wash - ₹34.99</option>
-                                <option value="Deluxe Package">Deluxe Package - ₹54.99</option>
-                                <option value="Interior Deep Clean">Interior Deep Clean - ₹44.99</option>
-                                <option value="Ceramic Coating">Ceramic Coating - ₹89.99</option>
-                            </select>
-                        </div>
+                  <div class="form-group">
+                      <label>Service *</label>
+                      <select name="service" [(ngModel)]="booking().service" required>
+                          <option value="">Select a service</option>
+                          <option value="Basic Wash">Basic Wash - ₹19.99</option>
+                          <option value="Premium Wash">Premium Wash - ₹34.99</option>
+                          <option value="Deluxe Package">Deluxe Package - ₹54.99</option>
+                          <option value="Interior Deep Clean">Interior Deep Clean - ₹44.99</option>
+                          <option value="Ceramic Coating">Ceramic Coating - ₹89.99</option>
+                      </select>
+                  </div>
 
-                        <div class="form-group">
-                            <label>Preferred Date *</label>
-                            <input type="date" required>
-                        </div>
+                  <div class="form-group">
+                      <label>Preferred Date *</label>
+                      <input type="date" name="date" [(ngModel)]="booking().date" required [min]="today">
+                  </div>
 
-                        <div class="form-group">
-                            <label>Preferred Time *</label>
-                            <select required>
-                                <option value="">Select time slot</option>
-                                <option value="08:00">08:00 AM</option>
-                                <option value="09:00">09:00 AM</option>
-                                <option value="10:00">10:00 AM</option>
-                                <option value="11:00">11:00 AM</option>
-                                <option value="12:00">12:00 PM</option>
-                                <option value="13:00">01:00 PM</option>
-                                <option value="14:00">02:00 PM</option>
-                                <option value="15:00">03:00 PM</option>
-                                <option value="16:00">04:00 PM</option>
-                                <option value="17:00">05:00 PM</option>
-                            </select>
-                        </div>
+                  <div class="form-group">
+                      <label>Preferred Time *</label>
+                      <select name="time" [(ngModel)]="booking().time" required>
+                          <option value="">Select time slot</option>
+                          <option value="08:00">08:00 AM</option>
+                          <option value="09:00">09:00 AM</option>
+                          <option value="10:00">10:00 AM</option>
+                          <option value="11:00">11:00 AM</option>
+                          <option value="12:00">12:00 PM</option>
+                          <option value="13:00">01:00 PM</option>
+                          <option value="14:00">02:00 PM</option>
+                          <option value="15:00">03:00 PM</option>
+                          <option value="16:00">04:00 PM</option>
+                          <option value="17:00">05:00 PM</option>
+                      </select>
+                  </div>
 
-                        <div class="form-group">
-                            <label>Special Requests</label>
-                            <textarea placeholder="Any special instructions or requests?" rows="4"></textarea>
-                        </div>
+                  <div class="form-group">
+                      <label>Special Requests</label>
+                      <textarea name="notes" [(ngModel)]="booking().notes" placeholder="Any special instructions or requests?" rows="4"></textarea>
+                  </div>
 
-                        <button type="submit" class="btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">Confirm Booking</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+                  <button type="submit" class="btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">Confirm Booking</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section" style="background: var(--bg-tertiary);">
-        <div class="container">
-            <h2 class="section-title">Customer Reviews</h2>
-            <p class="section-subtitle">See what our satisfied customers have to say</p>
-            
-            <div class="grid-3">
-                <div class="neo-card">
-                    <div style="color: #ffc107; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px;">★ ★ ★ ★ ★</div>
-                    <p style="margin-bottom: 16px; line-height: 1.6; color: var(--text-secondary);">"Amazing service! My car looks brand new. The team was professional and efficient. Highly recommended!"</p>
-                    <p style="font-weight: 600; color: var(--text-primary);">Sarah Johnson</p>
-                    <p style="color: var(--text-secondary); font-size: 14px;">Verified Customer</p>
-                </div>
+<!-- Testimonials Section -->
+<section id="testimonials" class="section" style="background: var(--bg-tertiary);">
+  <div class="container">
+      <h2 class="section-title">Customer Reviews</h2>
+      <p class="section-subtitle">See what our satisfied customers have to say</p>
+      
+      <div class="grid-3">
+          <div class="neo-card">
+              <div style="color: #ffc107; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px;">★ ★ ★ ★ ★</div>
+              <p style="margin-bottom: 16px; line-height: 1.6; color: var(--text-secondary);">"Amazing service! My car looks brand new. The team was professional and efficient. Highly recommended!"</p>
+              <p style="font-weight: 600; color: var(--text-primary);">Sarah Johnson</p>
+              <p style="color: var(--text-secondary); font-size: 14px;">Verified Customer</p>
+          </div>
 
-                <div class="neo-card">
-                    <div style="color: #ffc107; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px;">★ ★ ★ ★ ★</div>
-                    <p style="margin-bottom: 16px; line-height: 1.6; color: var(--text-secondary);">"Best car wash in town! Quick, affordable, and they really care about the details. Will definitely come back."</p>
-                    <p style="font-weight: 600; color: var(--text-primary);">Michael Chen</p>
-                    <p style="color: var(--text-secondary); font-size: 14px;">Verified Customer</p>
-                </div>
+          <div class="neo-card">
+              <div style="color: #ffc107; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px;">★ ★ ★ ★ ★</div>
+              <p style="margin-bottom: 16px; line-height: 1.6; color: var(--text-secondary);">"Best car wash in town! Quick, affordable, and they really care about the details. Will definitely come back."</p>
+              <p style="font-weight: 600; color: var(--text-primary);">Michael Chen</p>
+              <p style="color: var(--text-secondary); font-size: 14px;">Verified Customer</p>
+          </div>
 
-                <div class="neo-card">
-                    <div style="color: #ffc107; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px;">★ ★ ★ ★ ★</div>
-                    <p style="margin-bottom: 16px; line-height: 1.6; color: var(--text-secondary);">"The ceramic coating is incredible! My car stays clean longer and has an amazing shine. Worth every penny!"</p>
-                    <p style="font-weight: 600; color: var(--text-primary);">Emily Rodriguez</p>
-                    <p style="color: var(--text-secondary); font-size: 14px;">Verified Customer</p>
-                </div>
-            </div>
-        </div>
-    </section>
+          <div class="neo-card">
+              <div style="color: #ffc107; font-size: 14px; margin-bottom: 16px; letter-spacing: 2px;">★ ★ ★ ★ ★</div>
+              <p style="margin-bottom: 16px; line-height: 1.6; color: var(--text-secondary);">"The ceramic coating is incredible! My car stays clean longer and has an amazing shine. Worth every penny!"</p>
+              <p style="font-weight: 600; color: var(--text-primary);">Emily Rodriguez</p>
+              <p style="color: var(--text-secondary); font-size: 14px;">Verified Customer</p>
+          </div>
+      </div>
+  </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Have questions? We're here to help</p>
-            
-            <div class="grid-2">
-                <div class="neo-card">
-                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: var(--text-primary);">Contact Information</h3>
-                    
-                    <div style="margin-bottom: 24px;">
-                        <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">📍 Location</p>
-                        <p style="color: var(--text-secondary);">123 Main Street, Downtown<br>Your City, ST 12345</p>
-                    </div>
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Have questions? We're here to help</p>
+      
+      <div class="grid-2">
+          <div class="neo-card">
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: var(--text-primary);">Contact Information</h3>
+              
+              <div style="margin-bottom: 24px;">
+                  <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">📍 Location</p>
+                  <p style="color: var(--text-secondary);">123 Main Street, Downtown<br>Your City, ST 12345</p>
+              </div>
 
-                    <div style="margin-bottom: 24px;">
-                        <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">📞 Phone</p>
-                        <p style="color: var(--text-secondary);">(555) 123-4567</p>
-                    </div>
+              <div style="margin-bottom: 24px;">
+                  <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">📞 Phone</p>
+                  <p style="color: var(--text-secondary);">(555) 123-4567</p>
+              </div>
 
-                    <div style="margin-bottom: 24px;">
-                        <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">✉️ Email</p>
-                        <p style="color: var(--text-secondary);">info@carwashpro.com</p>
-                    </div>
+              <div style="margin-bottom: 24px;">
+                  <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">✉️ Email</p>
+                  <p style="color: var(--text-secondary);">info@carwashpro.com</p>
+              </div>
 
-                    <div>
-                        <p style="font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">⏰ Hours</p>
-                        <p style="color: var(--text-secondary);">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 5:00 PM<br>Sunday: 10:00 AM - 4:00 PM</p>
-                    </div>
-                </div>
+              <div>
+                  <p style="font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">⏰ Hours</p>
+                  <p style="color: var(--text-secondary);">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 5:00 PM<br>Sunday: 10:00 AM - 4:00 PM</p>
+              </div>
+          </div>
 
-                <div class="neo-card">
-                    <form onsubmit="handleContact(event)">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" required placeholder="Your name">
-                        </div>
+          <div class="neo-card">
+              <form onsubmit="handleContact(event)">
+                  <div class="form-group">
+                      <label>Name</label>
+                      <input type="text" required placeholder="Your name">
+                  </div>
 
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" required placeholder="your@email.com">
-                        </div>
+                  <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" required placeholder="your@email.com">
+                  </div>
 
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea required placeholder="Your message..." rows="5"></textarea>
-                        </div>
+                  <div class="form-group">
+                      <label>Message</label>
+                      <textarea required placeholder="Your message..." rows="5"></textarea>
+                  </div>
 
-                        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+                  <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>CarWash Pro</h4>
-                    <p style="color: var(--text-secondary); margin-bottom: 16px;">Premium vehicle wash service with professional detailing and customer satisfaction guaranteed.</p>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="footer-section">
+              <h4>CarWash Pro</h4>
+              <p style="color: var(--text-secondary); margin-bottom: 16px;">Premium vehicle wash service with professional detailing and customer satisfaction guaranteed.</p>
+          </div>
 
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#offers">Offers</a></li>
-                        <li><a href="#booking">Booking</a></li>
-                        <li><a href="#testimonials">Reviews</a></li>
-                    </ul>
-                </div>
+          <div class="footer-section">
+              <h4>Quick Links</h4>
+              <ul>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#offers">Offers</a></li>
+                  <li><a href="#booking">Booking</a></li>
+                  <li><a href="#testimonials">Reviews</a></li>
+              </ul>
+          </div>
 
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Basic Wash</a></li>
-                        <li><a href="#">Premium Wash</a></li>
-                        <li><a href="#">Deluxe Package</a></li>
-                        <li><a href="#">Ceramic Coating</a></li>
-                    </ul>
-                </div>
+          <div class="footer-section">
+              <h4>Services</h4>
+              <ul>
+                  <li><a href="#">Basic Wash</a></li>
+                  <li><a href="#">Premium Wash</a></li>
+                  <li><a href="#">Deluxe Package</a></li>
+                  <li><a href="#">Ceramic Coating</a></li>
+              </ul>
+          </div>
 
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="footer-section">
+              <h4>Follow Us</h4>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+              </ul>
+          </div>
+      </div>
 
-            <div style="border-top: 1px solid #e2e8f0; padding-top: 20px; text-align: center; color: var(--text-secondary);">
-                <p>&copy; 2025 CarWash Pro. All rights reserved. | <a href="#" style="color: var(--text-secondary);">Privacy Policy</a> | <a href="#" style="color: var(--text-secondary);">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
+      <div style="border-top: 1px solid #e2e8f0; padding-top: 20px; text-align: center; color: var(--text-secondary);">
+          <p>&copy; 2025 CarWash Pro. All rights reserved. | <a href="#" style="color: var(--text-secondary);">Privacy Policy</a> | <a href="#" style="color: var(--text-secondary);">Terms of Service</a></p>
+      </div>
+  </div>
+</footer>
 
-    <!-- Booking Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeBookingModal()">✕</button>
-            <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 24px; color: var(--text-primary);">Book Your Wash</h2>
-            <form id="modalBookingForm" onsubmit="handleBooking(event)">
-                <div class="form-group">
-                    <label>Full Name *</label>
-                    <input type="text" required placeholder="John Doe">
-                </div>
+<!-- Booking Modal -->
+<div class="modal" *ngIf="isModalOpen()">
+  <div class="modal-content">
+      <button class="modal-close" (click)="closeBookingModal()">✕</button>
+      <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 24px; color: var(--text-primary);">Book Your Wash</h2>
+      <form #modalBookingForm="ngForm" (ngSubmit)="handleBooking(modalBookingForm)">
+          <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" name="name" [(ngModel)]="booking().name" required placeholder="John Doe">
+          </div>
 
-                <div class="form-group">
-                    <label>Email Address *</label>
-                    <input type="email" required placeholder="john@example.com">
-                </div>
+          <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" [(ngModel)]="booking().email" required placeholder="john@example.com">
+          </div>
 
-                <div class="form-group">
-                    <label>Phone Number *</label>
-                    <input type="tel" required placeholder="(555) 123-4567">
-                </div>
+          <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" name="phone" [(ngModel)]="booking().phone" required placeholder="(555) 123-4567">
+          </div>
 
-                <div class="form-group">
-                    <label>Vehicle Type *</label>
-                    <select required>
-                        <option value="">Select vehicle type</option>
-                        <option value="sedan">Sedan</option>
-                        <option value="suv">SUV</option>
-                        <option value="truck">Truck</option>
-                        <option value="van">Van</option>
-                        <option value="sports">Sports Car</option>
-                    </select>
-                </div>
+          <div class="form-group">
+              <label>Vehicle Type *</label>
+              <select name="vehicleType" [(ngModel)]="booking().vehicleType" required>
+                  <option value="">Select vehicle type</option>
+                  <option value="sedan">Sedan</option>
+                  <option value="suv">SUV</option>
+                  <option value="truck">Truck</option>
+                  <option value="van">Van</option>
+                  <option value="sports">Sports Car</option>
+              </select>
+          </div>
 
-                <div class="form-group">
-                    <label>Service *</label>
-                    <select id="modalServiceSelect" required>
-                        <option value="">Select a service</option>
-                        <option value="Basic Wash">Basic Wash - ₹19.99</option>
-                        <option value="Premium Wash">Premium Wash - ₹34.99</option>
-                        <option value="Deluxe Package">Deluxe Package - ₹54.99</option>
-                        <option value="Interior Deep Clean">Interior Deep Clean - ₹44.99</option>
-                        <option value="Ceramic Coating">Ceramic Coating - ₹89.99</option>
-                    </select>
-                </div>
+          <div class="form-group">
+              <label>Service *</label>
+              <select name="service" [(ngModel)]="booking().service" required>
+                  <option value="">Select a service</option>
+                  <option value="Basic Wash">Basic Wash - ₹19.99</option>
+                  <option value="Premium Wash">Premium Wash - ₹34.99</option>
+                  <option value="Deluxe Package">Deluxe Package - ₹54.99</option>
+                  <option value="Interior Deep Clean">Interior Deep Clean - ₹44.99</option>
+                  <option value="Ceramic Coating">Ceramic Coating - ₹89.99</option>
+              </select>
+          </div>
 
-                <div class="form-group">
-                    <label>Preferred Date *</label>
-                    <input type="date" required>
-                </div>
+          <div class="form-group">
+              <label>Preferred Date *</label>
+              <input type="date" name="date" [(ngModel)]="booking().date" required [min]="today">
+          </div>
 
-                <div class="form-group">
-                    <label>Preferred Time *</label>
-                    <select required>
-                        <option value="">Select time slot</option>
-                        <option value="08:00">08:00 AM</option>
-                        <option value="09:00">09:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">01:00 PM</option>
-                        <option value="14:00">02:00 PM</option>
-                        <option value="15:00">03:00 PM</option>
-                        <option value="16:00">04:00 PM</option>
-                        <option value="17:00">05:00 PM</option>
-                    </select>
-                </div>
+          <div class="form-group">
+              <label>Preferred Time *</label>
+              <select name="time" [(ngModel)]="booking().time" required>
+                  <option value="">Select time slot</option>
+                  <option value="08:00">08:00 AM</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">01:00 PM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="15:00">03:00 PM</option>
+                  <option value="16:00">04:00 PM</option>
+                  <option value="17:00">05:00 PM</option>
+              </select>
+          </div>
 
-                <button type="submit" class="btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">Confirm Booking</button>
-            </form>
-        </div>
-    </div>
+          <button type="submit" class="btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">Confirm Booking</button>
+      </form>
+  </div>
+</div>
 <router-outlet />
