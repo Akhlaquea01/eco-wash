@@ -132,23 +132,40 @@
 
         <div style="margin-bottom: 24px;">
           <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">📍 Location</p>
-          <p style="color: var(--text-secondary);">123 Main Street, Downtown<br>Your City, ST 12345</p>
+          <p style="color: var(--text-secondary);">
+            <a [href]="contactInfo.directionLink" target="_blank" rel="noopener noreferrer"
+               style="color: var(--text-secondary); text-decoration: none;">
+              {{ contactInfo.location }}
+            </a>
+          </p>
         </div>
 
         <div style="margin-bottom: 24px;">
           <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">📞 Phone</p>
-          <p style="color: var(--text-secondary);">(555) 123-4567</p>
+          <p style="color: var(--text-secondary);">
+            <a [href]="'tel:' + contactInfo.phone" style="color: var(--text-secondary); text-decoration: none;">
+              {{ contactInfo.displayPhone }}
+            </a>
+          </p>
         </div>
 
         <div style="margin-bottom: 24px;">
           <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">✉️ Email</p>
-          <p style="color: var(--text-secondary);">info@carwashpro.com</p>
+          <p style="color: var(--text-secondary);">
+            <a [href]="'mailto:' + contactInfo.email" style="color: var(--text-secondary); text-decoration: none;">
+              {{ contactInfo.email }}
+            </a>
+          </p>
+
         </div>
 
         <div>
           <p style="font-weight: 600; margin-bottom: 12px; color: var(--text-primary);">⏰ Hours</p>
-          <p style="color: var(--text-secondary);">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 5:00
-            PM<br>Sunday: 10:00 AM - 4:00 PM</p>
+          <p style="color: var(--text-secondary);">
+            {{ contactInfo.hours.weekdays }}<br />
+            {{ contactInfo.hours.saturday }}<br />
+            {{ contactInfo.hours.sunday }}
+          </p>
         </div>
       </div>
 
@@ -166,7 +183,8 @@
 
           <div class="form-group">
             <label>Message</label>
-            <textarea name="message" [(ngModel)]="contact.message" required placeholder="Your message..." rows="5"></textarea>
+            <textarea name="message" [(ngModel)]="contact.message" required placeholder="Your message..."
+              rows="5"></textarea>
           </div>
 
           <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>

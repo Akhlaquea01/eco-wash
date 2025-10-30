@@ -196,4 +196,16 @@ export class App {
     window.location.href = mailto;
   }
 
+  contactInfo = {
+    location: 'ECO WASH "N" SERVICES,Nawab Road, Near Marwari High School, Chandwara, Muzaffarpur, Bihar (842001)',
+    directionLink: 'https://share.google/a2s7TbolXIVqdoRJT',
+    phone: '+919504707510',
+    displayPhone: '9504707510',
+    email: 'mdashabalam786@gmail.com',
+    hours: {
+      weekdays: 'Monday - Friday: 8:00 AM - 6:00 PM',
+      saturday: 'Saturday: 9:00 AM - 5:00 PM',
+      sunday: 'Sunday: 10:00 AM - 4:00 PM'
+    }
+  };
 }
