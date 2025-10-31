@@ -221,27 +221,42 @@
     <form #modalBookingForm="ngForm" (ngSubmit)="handleBooking(modalBookingForm)">
       <div class="form-group">
         <label>Full Name *</label>
-        <input type="text" name="name" [(ngModel)]="booking().name" required placeholder="John Doe">
+        <input type="text" name="name" [(ngModel)]="booking().name" #name="ngModel" required placeholder="John Doe">
+        @if (name.invalid && (name.dirty || name.touched || modalBookingForm.submitted)) {
+        <div class="error-message">Full name is required.</div>
+        }
       </div>
 
       <div class="form-group">
         <label>Email Address *</label>
-        <input type="email" name="email" [(ngModel)]="booking().email" required placeholder="john@example.com">
+        <input type="email" name="email" [(ngModel)]="booking().email" #email="ngModel" required email
+          placeholder="john@example.com">
+        @if (email.invalid && (email.dirty || email.touched || modalBookingForm.submitted)) {
+        <div class="error-message">A valid email is required.</div>
+        }
       </div>
 
       <div class="form-group">
         <label>Phone Number *</label>
-        <input type="tel" name="phone" [(ngModel)]="booking().phone" required placeholder="(555) 123-4567">
+        <input type="tel" name="phone" [(ngModel)]="booking().phone" #phone="ngModel" required
+          placeholder="(555) 123-4567">
+        @if (phone.invalid && (phone.dirty || phone.touched || modalBookingForm.submitted)) {
+        <div class="error-message">Phone number is required.</div>
+        }
       </div>
 
       <div class="form-group">
         <label>Vehicle Number *</label>
-        <input type="text" name="vehicleNumber" [(ngModel)]="booking().vehicleNumber" required placeholder="BRO61234">
+        <input type="text" name="vehicleNumber" [(ngModel)]="booking().vehicleNumber" #vehicleNumber="ngModel" required
+          placeholder="BRO61234">
+        @if (vehicleNumber.invalid && (vehicleNumber.dirty || vehicleNumber.touched || modalBookingForm.submitted)) {
+        <div class="error-message">Vehicle number is required.</div>
+        }
       </div>
 
       <div class="form-group">
         <label>Service *</label>
-        <select name="service" [(ngModel)]="booking().service" required>
+        <select name="service" [(ngModel)]="booking().service" #service="ngModel" required>
           <option value="">Select a service</option>
           @for (category of services; track category.category) {
           <optgroup [label]="category.category">
@@ -253,16 +268,22 @@
           </optgroup>
           }
         </select>
+        @if (service.invalid && (service.dirty || service.touched || modalBookingForm.submitted)) {
+        <div class="error-message">Please select a service.</div>
+        }
       </div>
 
       <div class="form-group">
         <label>Preferred Date *</label>
-        <input type="date" name="date" [(ngModel)]="booking().date" required [min]="today">
+        <input type="date" name="date" [(ngModel)]="booking().date" #date="ngModel" required [min]="today">
+        @if (date.invalid && (date.dirty || date.touched || modalBookingForm.submitted)) {
+        <div class="error-message">Please select a date.</div>
+        }
       </div>
 
       <div class="form-group">
         <label>Preferred Time *</label>
-        <select name="time" [(ngModel)]="booking().time" required>
+        <select name="time" [(ngModel)]="booking().time" #time="ngModel" required>
           <option value="">Select time slot</option>
           <option value="08:00">08:00 AM</option>
           <option value="09:00">09:00 AM</option>
@@ -275,13 +296,15 @@
           <option value="16:00">04:00 PM</option>
           <option value="17:00">05:00 PM</option>
         </select>
+        @if (time.invalid && (time.dirty || time.touched || modalBookingForm.submitted)) {
+        <div class="error-message">Please select a time slot.</div>
+        }
       </div>
 
-      <div class="form-group">
-        <input type="number" name="price" [(ngModel)]="booking().price" required placeholder="786">
-      </div>
+      <input type="hidden" name="price" [(ngModel)]="booking().price">
 
-      <button type="submit" class="btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">Confirm
+      <button type="submit" class="btn-primary" [disabled]="modalBookingForm.invalid"
+        style="width: 100%; font-size: 16px; padding: 14px;">Confirm
         Booking</button>
     </form>
   </div>
