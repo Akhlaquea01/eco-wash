@@ -221,7 +221,8 @@
     <form #modalBookingForm="ngForm" (ngSubmit)="handleBooking(modalBookingForm)">
       <div class="form-group">
         <label>Full Name *</label>
-        <input type="text" name="name" [(ngModel)]="booking().name" #name="ngModel" required placeholder="John Doe">
+        <input type="text" name="name" [(ngModel)]="booking().name" #name="ngModel" required
+          placeholder="Enter Your Name">
         @if (name.invalid && (name.dirty || name.touched || modalBookingForm.submitted)) {
         <div class="error-message">Full name is required.</div>
         }
@@ -229,8 +230,7 @@
 
       <div class="form-group">
         <label>Email Address *</label>
-        <input type="email" name="email" [(ngModel)]="booking().email" #email="ngModel" required email
-          placeholder="john@example.com">
+        <input type="email" name="email" [(ngModel)]="booking().email" #email="ngModel" email placeholder="Enter Email">
         @if (email.invalid && (email.dirty || email.touched || modalBookingForm.submitted)) {
         <div class="error-message">A valid email is required.</div>
         }
@@ -239,7 +239,7 @@
       <div class="form-group">
         <label>Phone Number *</label>
         <input type="tel" name="phone" [(ngModel)]="booking().phone" #phone="ngModel" required
-          placeholder="(555) 123-4567">
+          placeholder="Enter Mobile Numer">
         @if (phone.invalid && (phone.dirty || phone.touched || modalBookingForm.submitted)) {
         <div class="error-message">Phone number is required.</div>
         }
@@ -248,7 +248,7 @@
       <div class="form-group">
         <label>Vehicle Number *</label>
         <input type="text" name="vehicleNumber" [(ngModel)]="booking().vehicleNumber" #vehicleNumber="ngModel" required
-          placeholder="BRO61234">
+          placeholder="Vehicle Number">
         @if (vehicleNumber.invalid && (vehicleNumber.dirty || vehicleNumber.touched || modalBookingForm.submitted)) {
         <div class="error-message">Vehicle number is required.</div>
         }

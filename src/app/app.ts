@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router';
 
 interface BookingForm {
   name: string;
-  email: string;
+  email?: string;
   phone: string;
   vehicleNumber: string;
   service: string;
