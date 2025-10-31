@@ -77,10 +77,26 @@ export class App implements OnInit {
   // Booking form submission
   handleBooking(form: any) {
     if (form.valid) {
-      alert(`✅ Booking confirmed for ${this.selectedService()}! We'll contact you soon.`);
-      this.closeBookingModal();
-      form.resetForm();
-      this.selectedService.set('');
+      const webhookUrl = 'https://iam-atts.app.n8n.cloud/webhook/ab0d048e-e09c-4467-9eb0-914d5c6f40fc';
+      const bookingData = {
+        ...this.booking(),
+        service: this.selectedService(),
+        status: 'Pending',
+        createdAt: new Date().toISOString()
+      };
+
+      this.http.post(webhookUrl, bookingData).subscribe({
+        next: () => {
+          alert(`✅ Booking confirmed for ${this.selectedService()}! We'll contact you soon.`);
+          this.closeBookingModal();
+          form.resetForm();
+          this.selectedService.set('');
+        },
+        error: (error) => {
+          console.error('Error sending booking data:', error);
+          alert('❌ There was an error confirming your booking. Please try again.');
+        }
+      });
     } else {
       // Mark all fields as touched to display validation errors
       Object.values(form.controls).forEach(control => {
