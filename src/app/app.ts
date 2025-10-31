@@ -111,9 +111,24 @@ export class App implements OnInit {
     }
   }
   selectService(serviceName: string, price: number) {
-    this.selectedService = serviceName;
-    this.booking.update(form => ({ ...form, service: serviceName, price: price }));
-    this.openBookingModal(serviceName);
+    let categoryName = '';
+    for (const category of this.services) {
+      const found = category.items.find((item: any) => item.name === serviceName);
+      if (found) {
+        categoryName = category.category;
+        break;
+      }
+    }
+
+    if (categoryName) {
+      this.selectedService = `${categoryName}|${serviceName}`;
+      this.booking.update(form => ({
+        ...form,
+        service: `${categoryName} / ${serviceName}`,
+        price: price
+      }));
+      this.openBookingModal(serviceName);
+    }
   }
   contact = {
     name: '',
@@ -145,7 +160,7 @@ export class App implements OnInit {
         service: `${categoryName} / ${found.name}`,
         price: found.price
       }));
-      this.selectedService = (`${categoryName} / ${found.name}`);
+      this.selectedService = value;
       console.log(
         `✅ Selected: ${categoryName} / ${found.name} → ₹${found.price}`
       );
