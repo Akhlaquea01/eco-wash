@@ -81,6 +81,11 @@ export class App implements OnInit {
       this.closeBookingModal();
       form.resetForm();
       this.selectedService.set('');
+    } else {
+      // Mark all fields as touched to display validation errors
+      Object.values(form.controls).forEach(control => {
+        (control as any).markAsTouched();
+      });
     }
   }
 
@@ -93,7 +98,7 @@ export class App implements OnInit {
   }
   selectService(serviceName: string, price: number) {
     this.selectedService.set(serviceName);
-    this.booking.update(form => ({ ...form, service: serviceName }));
+    this.booking.update(form => ({ ...form, service: serviceName, price: price }));
     this.openBookingModal(serviceName);
   }
   contact = {
