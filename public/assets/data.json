@@ -108,10 +108,10 @@
   ],
   "offers": [
     {
-      "badge": "SAVE ₹50",
+      "badge": "SAVE ₹",
       "title": "Premium Wash Discount",
-      "description": "₹50 off on Premium Wash for all cars",
-      "price": 300,
+      "description": "3 Washes — ₹899 for 5-seater",
+      "price": 899,
       "note": "Valid till this weekend",
       "buttonText": "Claim Offer",
       "buttonStyle": "btn-secondary",
@@ -120,22 +120,12 @@
     {
       "badge": "LOYALTY REWARD",
       "title": "Deluxe Package Advantage",
-      "description": "Book Deluxe Package & enjoy up to 4 washes monthly",
-      "price": 999,
-      "note": "Perfect for regular customers",
-      "buttonText": "Subscribe Now",
+      "description": "₹1049 for 7-seater",
+      "price": 1049,
+      "note": "Perfect for regular customers (3 washes included)",
+      "buttonText": "Claim Offer",
       "buttonStyle": "btn-secondary",
       "serviceName": "Deluxe Package"
-    },
-    {
-      "badge": "COMING SOON",
-      "title": "Ceramic Coating Service",
-      "description": "High gloss protection — launching soon!",
-      "price": 0,
-      "note": "Stay tuned for updates",
-      "buttonText": "Notify Me",
-      "buttonStyle": "btn-secondary",
-      "serviceName": "Ceramic Coating"
     }
   ],
   "testimonials": [
