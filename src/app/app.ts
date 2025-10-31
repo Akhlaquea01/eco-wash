@@ -61,12 +61,11 @@ export class App implements OnInit {
     price: 0
   });
 
-  selectedService = signal<string>('');
+  selectedService = '';
   today = new Date().toISOString().split('T')[0];
 
   // Modal controls
   openBookingModal(serviceName?: string) {
-    if (serviceName) this.selectedService.set(serviceName);
     this.isModalOpen.set(true);
   }
 
@@ -80,17 +79,16 @@ export class App implements OnInit {
       const webhookUrl = 'https://iam-atts.app.n8n.cloud/webhook/ab0d048e-e09c-4467-9eb0-914d5c6f40fc';
       const bookingData = {
         ...this.booking(),
-        service: this.selectedService(),
         status: 'Pending',
         createdAt: new Date().toISOString()
       };
 
       this.http.post(webhookUrl, bookingData).subscribe({
         next: () => {
-          alert(`✅ Booking confirmed for ${this.selectedService()}! We'll contact you soon.`);
+          alert(`✅ Booking confirmed for ${this.selectedService}! We'll contact you soon.`);
           this.closeBookingModal();
           form.resetForm();
-          this.selectedService.set('');
+          this.selectedService = '';
         },
         error: (error) => {
           console.error('Error sending booking data:', error);
@@ -113,7 +111,7 @@ export class App implements OnInit {
     }
   }
   selectService(serviceName: string, price: number) {
-    this.selectedService.set(serviceName);
+    this.selectedService = serviceName;
     this.booking.update(form => ({ ...form, service: serviceName, price: price }));
     this.openBookingModal(serviceName);
   }
@@ -133,4 +131,25 @@ export class App implements OnInit {
     // Open user's email client
     window.location.href = mailto;
   }
+
+  onServiceChange(event: any) {
+    if (!event) return;
+    const value = event.target.value || ''
+    const [categoryName, serviceName] = value.split('|');
+    const category = this.services.find((c: any) => c.category === categoryName);
+    const found = category?.items.find((item: any) => item.name === serviceName);
+
+    if (found) {
+      this.booking.update(form => ({
+        ...form,
+        service: `${categoryName} / ${found.name}`,
+        price: found.price
+      }));
+      this.selectedService = (`${categoryName} / ${found.name}`);
+      console.log(
+        `✅ Selected: ${categoryName} / ${found.name} → ₹${found.price}`
+      );
+    }
+  }
+
 }
