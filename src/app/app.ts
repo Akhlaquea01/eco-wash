@@ -8,11 +8,12 @@ interface BookingForm {
   name: string;
   email: string;
   phone: string;
-  vehicleType: string;
+  vehicleNumber: string;
   service: string;
   date: string;
   time: string;
   notes: string;
+  price: number
 }
 interface Testimonial {
   stars: number;
@@ -52,11 +53,12 @@ export class App implements OnInit {
     name: '',
     email: '',
     phone: '',
-    vehicleType: '',
+    vehicleNumber: '',
     service: '',
     date: '',
     time: '',
-    notes: ''
+    notes: '',
+    price: 0
   });
 
   selectedService = signal<string>('');

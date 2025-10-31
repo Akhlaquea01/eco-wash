@@ -35,36 +35,37 @@
 
     <div class="services-section">
       @for (category of services; track category.category) {
-        <h2 style="font-size: 22px; font-weight: 700; margin: 32px 0 16px; color: var(--text-primary); text-align: center;">
-          {{ category.category }}
-        </h2>
-    
-        <div class="grid-3">
-          @for (service of category.items; track service.name) {
-            <div class="neo-card">
-              <div class="icon" style="font-size: 32px; margin-bottom: 8px;">{{ service.icon }}</div>
-    
-              <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">
-                {{ service.name }}
-              </h3>
-    
-              <p style="color: var(--text-secondary); margin-bottom: 12px; font-size: 14px; line-height: 1.5;">
-                {{ service.description }}
-              </p>
-    
-              <p style="font-size: 22px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">
-                {{ service.price === 0 ? 'Custom' : '₹' + service.price }}
-              </p>
-    
-              <button class="btn-primary" style="width: 100%;" (click)="selectService(service.name, service.price)">
-                {{ service.price === 0 ? 'Inquire' : 'Select' }}
-              </button>
-            </div>
-          }
+      <h2
+        style="font-size: 22px; font-weight: 700; margin: 32px 0 16px; color: var(--text-primary); text-align: center;">
+        {{ category.category }}
+      </h2>
+
+      <div class="grid-3">
+        @for (service of category.items; track service.name) {
+        <div class="neo-card">
+          <div class="icon" style="font-size: 32px; margin-bottom: 8px;">{{ service.icon }}</div>
+
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">
+            {{ service.name }}
+          </h3>
+
+          <p style="color: var(--text-secondary); margin-bottom: 12px; font-size: 14px; line-height: 1.5;">
+            {{ service.description }}
+          </p>
+
+          <p style="font-size: 22px; font-weight: 800; color: var(--accent-primary); margin-bottom: 16px;">
+            {{ service.price === 0 ? 'Custom' : '₹' + service.price }}
+          </p>
+
+          <button class="btn-primary" style="width: 100%;" (click)="selectService(service.name, service.price)">
+            {{ service.price === 0 ? 'Inquire' : 'Select' }}
+          </button>
         </div>
+        }
+      </div>
       }
     </div>
-    
+
   </div>
 </section>
 
@@ -145,7 +146,7 @@
           <p style="font-weight: 600; margin-bottom: 8px; color: var(--text-primary);">📍 Location</p>
           <p style="color: var(--text-secondary);">
             <a [href]="contactInfo.directionLink" target="_blank" rel="noopener noreferrer"
-               style="color: var(--text-secondary); text-decoration: none;">
+              style="color: var(--text-secondary); text-decoration: none;">
               {{ contactInfo.location }}
             </a>
           </p>
@@ -234,15 +235,8 @@
       </div>
 
       <div class="form-group">
-        <label>Vehicle Type *</label>
-        <select name="vehicleType" [(ngModel)]="booking().vehicleType" required>
-          <option value="">Select vehicle type</option>
-          <option value="sedan">Sedan</option>
-          <option value="suv">SUV</option>
-          <option value="truck">Truck</option>
-          <option value="van">Van</option>
-          <option value="sports">Sports Car</option>
-        </select>
+        <label>Vehicle Number *</label>
+        <input type="text" name="vehicleNumber" [(ngModel)]="booking().vehicleNumber" required placeholder="BRO61234">
       </div>
 
       <div class="form-group">
@@ -250,13 +244,13 @@
         <select name="service" [(ngModel)]="booking().service" required>
           <option value="">Select a service</option>
           @for (category of services; track category.category) {
-            <optgroup [label]="category.category">
-              @for (service of category.items; track service.name) {
-                <option [value]="service.name" [disabled]="service.price === 0">
-                  {{ service.name }} - {{ service.price === 0 ? 'Custom' : '₹' + service.price }}
-                </option>
-              }
-            </optgroup>
+          <optgroup [label]="category.category">
+            @for (service of category.items; track service.name) {
+            <option [value]="service.name" [disabled]="service.price === 0">
+              {{ service.name }} - {{ service.price === 0 ? 'Custom' : '₹' + service.price }}
+            </option>
+            }
+          </optgroup>
           }
         </select>
       </div>
@@ -281,6 +275,10 @@
           <option value="16:00">04:00 PM</option>
           <option value="17:00">05:00 PM</option>
         </select>
+      </div>
+
+      <div class="form-group">
+        <input type="number" name="price" [(ngModel)]="booking().price" required placeholder="786">
       </div>
 
       <button type="submit" class="btn-primary" style="width: 100%; font-size: 16px; padding: 14px;">Confirm
