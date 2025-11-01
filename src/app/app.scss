@@ -15,7 +15,7 @@ body {
 /* <CHANGE> Neomorphism button styles with soft shadows */
 .btn-primary {
     background: var(--accent-primary);
-    color: white;
+    color: #2d3748;
     padding: 12px 28px;
     border-radius: 12px;
     font-weight: 600;
@@ -23,7 +23,6 @@ body {
     border: none;
     cursor: pointer;
     box-shadow: var(--shadow-md);
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 .btn-primary:hover {
@@ -38,7 +37,7 @@ body {
 
 .btn-secondary {
     background: var(--accent-secondary);
-    color: white;
+    color: #2d3748;
     padding: 12px 28px;
     border-radius: 12px;
     font-weight: 600;
@@ -46,7 +45,6 @@ body {
     border: none;
     cursor: pointer;
     box-shadow: var(--shadow-md);
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 .btn-secondary:hover {
