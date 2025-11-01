@@ -15,15 +15,21 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero-section">
-  <div class="container hero-content">
-    <h1
-      style="font-size: 52px; margin-bottom: 16px; font-weight: 800; letter-spacing: -1px; color: var(--text-primary);">
-      Premium Vehicle Wash Service</h1>
-    <p style="font-size: 18px; margin-bottom: 32px; color: var(--text-secondary); line-height: 1.6;">Professional
-      cleaning for your car, inside and out. Fast, reliable, and affordable.</p>
-    <button class="btn-secondary" (click)="openBookingModal()" style="font-size: 16px; padding: 14px 32px;">Book Your
-      Wash Today</button>
+<section>
+  <div class="relative h-screen w-full flex items-center justify-center text-center bg-cover bg-center"
+    style="background-image:url(/assets/images/hero-section.png);">
+    <div class="absolute top-0 right-0 bottom-0 left-0 bg-gray-900 opacity-75"></div>
+
+    <div class="container hero-content">
+      <h1
+        style="font-size: 52px; margin-bottom: 16px; font-weight: 800; letter-spacing: -1px; color: var(--text-primary);">
+        Premium Vehicle Wash Service</h1>
+      <p style="font-size: 18px; margin-bottom: 32px; color: var(--text-secondary); line-height: 1.6;">Professional
+        cleaning for your car, inside and out. Fast, reliable, and affordable.</p>
+      <button class="btn-secondary" (click)="openBookingModal()" style="font-size: 16px; padding: 14px 32px;">Book Your
+        Wash Today</button>
+    </div>
+
   </div>
 </section>
 
@@ -256,8 +262,8 @@
 
       <div class="form-group">
         <label>Service *</label>
-        <select name="service" [(ngModel)]="selectedService" (change)="onServiceChange($event)"
-          #service="ngModel" required>
+        <select name="service" [(ngModel)]="selectedService" (change)="onServiceChange($event)" #service="ngModel"
+          required>
           <option value="">Select a service</option>
           @for (category of services; track category.category) {
           <optgroup [label]="category.category">
